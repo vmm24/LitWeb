@@ -1,0 +1,16 @@
+
+{%extends "blog/base.html" %}
+{% block content %}
+<section class="resume-section" id="experience">
+        {% for post in posts %}
+        <div class="resume-section-content">
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
+            <h3 class="mb-0"><a href="{% url 'post-detail' post.id %}">{{post.title}}</a></h3>
+            <div class="subheading mb-3"><a href="#">{{post.author}}</a></div>
+            <p>{{post.content}}</p>
+          </div>
+          <div class="flex-shrink-0"><span class="text-primary">{{post.date|date:"F d, Y"}}</span></div>
+          </div>
+          {% endfor %}
+{% endblock content %}
