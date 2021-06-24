@@ -9,18 +9,17 @@ def home(request):
 
 def about(request):
     context = {
-    'posts':Post.objects.all()
+    'posts':Post.objects.filter(status=1).order_by('-date')
     }
     return render(request,'blog/about.html',context)
 
 class PostListView(ListView):
-    model=Post
+    queryset = Post.objects.filter(status=1).order_by('-date')
     template_name='blog/about.html'
-    context_object_name='posts'
-    ordering=['-date']
 
 class PostDetailView(DetailView):
     model=Post
+    template_name = 'blog/post_detail.html'
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model=Post

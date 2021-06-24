@@ -1,16 +1,37 @@
 
 {%extends "blog/base.html" %}
 {% block content %}
-<section class="resume-section" id="experience">
-        {% for post in posts %}
-        <div class="resume-section-content">
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0"><a href="{% url 'post-detail' post.id %}">{{post.title}}</a></h3>
-            <div class="subheading mb-3"><a href="#">{{post.author}}</a></div>
-            <p>{{post.content}}</p>
-          </div>
-          <div class="flex-shrink-0"><span class="text-primary">{{post.date|date:"F d, Y"}}</span></div>
+<style>
+  .container {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      background-image: url("blog/static/images/books.jpg") repeat;
+  }
+  
+  .head_text {
+      color: white;
+  }
+  
+  .card {
+      box-shadow: 0 16px 48px #E3E7EB;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+      <!-- Blog Entries Column -->
+      <div class="col-md-12 mt-3 left">
+          {% for post in post_list %}
+          <div class="card mb-4">
+              <div class="card-body">
+                  <h3 class="card-title">{{ post.title }}</h3>
+                  <p class="card-text text-muted h6">{{ post.author }} | {{ post.date}} </p>
+                  <p class="card-text">{{post.content|slice:":200"}}....</p>
+                  <a href="{% url 'post-detail' post.id %}" class="btn btn-primary">Read More &rarr;</a>
+              </div>
           </div>
           {% endfor %}
+      </div>
+  </div>
+</div>
 {% endblock content %}
