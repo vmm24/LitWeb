@@ -9,16 +9,16 @@ STATUS = (
 )
 
 class Events(models.Model):
-    title=models.CharField(max_length=100)
-    content = models.TextField()
-    date = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(User,on_delete=models.CASCADE)
-    status = models.IntegerField(choices=STATUS, default=0)
+    title=models.CharField(blank=True, max_length=100)
+    content = models.TextField(blank=True)
+    date = models.DateTimeField(blank=True, default=timezone.now)
+    # author = models.ForeignKey(User,on_delete=models.CASCADE)
+    status = models.IntegerField(choices=STATUS, default=1)
 
     class Meta:
         ordering = ['-date']
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse('events-detail', kwargs={'pk':self.pk})
+    def get_absolute_url(self):
+        return reverse('event_detail', kwargs={'pk':self.pk})
