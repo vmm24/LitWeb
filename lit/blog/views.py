@@ -4,8 +4,10 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 def home(request):
-
     return render(request,'blog/home.html')
+
+# def events(request):
+#     return render(request,'blog/events.html')
 
 def about(request):
     context = {

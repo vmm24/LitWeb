@@ -1,0 +1,20 @@
+{%extends "blog/base.html" %}
+{% block content %}
+<section class="resume-section" id="experience">
+        <div class="resume-section-content">
+          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="flex-grow-1">
+            <h3 class="mb-0">{{event.title}}</h3>
+            {% comment %} <div class="subheading mb-3"><a href="#">{{event.author}}</a></div> {% endcomment %}
+            <p>{{event.content}}</p>
+          </div>
+          <div class="flex-shrink-0"><span class="text-primary">{{event.date|date:"F d, Y"}}</span></div>
+          {% comment %} {% if event.author == user %}
+            <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-5 ml-1" href="{% url 'event-update' object.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-5 ml-1" href="{% url 'event-delete' object.id %}">Delete</a>
+            </div>
+          {% endif %} {% endcomment %}
+          </div>
+
+{% endblock content %}
