@@ -1,0 +1,26 @@
+
+{%extends "blog/base.html" %}
+{% block content %}
+<style>
+  .container {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+  }
+  
+  .head_text {
+      color: white;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+      <!-- Blog Entries Column -->
+          {% for mag in mags_list %}
+          <div class="col-md-6 mt-3 mx-auto">
+                <a href = "{{ mag.pdf.url }}"> <img src = {{ mag.image.url }} width="70%" height="auto" class="mx-auto d-block"> </a>
+                <h4 class="card-title text-center">{{ mag.title }}</h4>
+          </div>
+          {% endfor %}
+  </div>
+</div>
+{% endblock content %}

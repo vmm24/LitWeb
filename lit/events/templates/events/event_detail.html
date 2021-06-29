@@ -1,20 +1,23 @@
 {%extends "blog/base.html" %}
 {% block content %}
-<section class="resume-section" id="experience">
-        <div class="resume-section-content">
-          <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">{{event.title}}</h3>
-            {% comment %} <div class="subheading mb-3"><a href="#">{{event.author}}</a></div> {% endcomment %}
-            <p>{{event.content}}</p>
+<style>
+  #post_full {
+      box-shadow: 0 16px 48px #E3E7EB;
+      background-color: #11111110;
+      border: none;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 card mb-5  mt-5 left  top" id="post_full">
+      <div class="card-body">
+            <h3 class="mb-0 text-center">{{object.title}}</h3>
+            <h4 class="flex-shrink-0 text-center"><span class="text-primary">{{object.date|date:"F d, Y"}}</span><span class="text-primary">{{ model.datetime|time }}</span></h4>
+            <a href = "{{ object.image.url }}"> <img src = {{object.image.url}} width="70%" height="auto" class="mx-auto d-block"> </a>
+            <br>
+            <p>{{object.content | linebreaks}}</p>
           </div>
-          <div class="flex-shrink-0"><span class="text-primary">{{event.date|date:"F d, Y"}}</span></div>
-          {% comment %} {% if event.author == user %}
-            <div>
-            <a class="btn btn-secondary btn-sm mt-1 mb-5 ml-1" href="{% url 'event-update' object.id %}">Update</a>
-            <a class="btn btn-danger btn-sm mt-1 mb-5 ml-1" href="{% url 'event-delete' object.id %}">Delete</a>
-            </div>
-          {% endif %} {% endcomment %}
           </div>
+        </div>
 
 {% endblock content %}
