@@ -1,10 +1,6 @@
 from django.shortcuts import render
 from .models import Events
 from django.views.generic import ListView, DetailView
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-
-# def events(request):
-#     return render(request,'events/events.html')
 
 def events(request):
     context = {

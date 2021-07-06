@@ -1,0 +1,40 @@
+
+{%extends "blog/base1.html" %}
+{% block content %}
+<style>
+  .container {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+  }
+  
+  .head_text {
+      color: white;
+  }
+  
+  .card {
+      display: flex;
+      flex-wrap: wrap;
+      box-shadow: 0 16px 48px #E3E7EB;
+      background-color: #11111110;
+      border: none;
+  }
+</style>
+<div class="container">
+  <div class="row">
+      <!-- Blog Entries Column -->
+      
+          {% for event in events_list %}
+          <div class="col-md-6 mt-3 mx-auto">
+          <div class="card mb-4">
+              <div class="card-body">
+                <a href="{% url 'event_detail' event.id %}"><h3 class="card-title text-primary text-center">{{ event.title }}</h3></a>
+                <h4 class="flex-shrink-0 text-center"><span>{{event.date}}</span></h4>
+                <img src = {{ event.image.url }} width="70%" height="auto" class="mx-auto d-block">
+              </div>
+          </div>
+          </div>
+          {% endfor %}
+      
+  </div>
+</div>
+{% endblock content %}

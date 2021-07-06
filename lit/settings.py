@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -31,9 +32,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'quiz.apps.QuizConfig',
+    'debate_events.apps.DebateEventsConfig',
+    'debate.apps.DebateConfig',
+    'mainpage.apps.MainpageConfig',
     'events.apps.EventsConfig',
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
+    'vivaan.apps.VivaanConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -128,3 +134,7 @@ CRISPY_TEMPLATE_PACK='bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'
 
 LOGIN_URL = 'login'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'

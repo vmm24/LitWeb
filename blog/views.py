@@ -6,6 +6,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 def home(request):
     return render(request,'blog/home.html')
 
+def team(request):
+    return render(request,'blog/team.html')
+
 # def events(request):
 #     return render(request,'blog/events.html')
 
