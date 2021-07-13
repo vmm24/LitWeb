@@ -8,8 +8,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blog.urls')),
+    path('', include('litsoc.urls')),
+    path('writing/', include('blog.urls')),
     path('events/', include('events.urls')),
+    path('debating/', include('debating.urls')),
+    path('quizzing/', include('quizzing.urls')),
     path('vivaan/', include('vivaan.urls')),
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),

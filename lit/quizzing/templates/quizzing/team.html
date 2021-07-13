@@ -1,0 +1,100 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>LitSoc</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+</head>
+<style>
+  body {
+    background-image: url('/static/images/quiz_bg.jpg');
+    background-repeat: repeat;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+</style>
+<body id="page-top">
+  <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="sideNav" style="background-image: url('/static/images/qnav.jpg'); background-repeat: no-repeat; background-size: 100% 100%;";>
+            <a class="navbar-brand js-scroll-trigger" href="{% url 'litsoc-home' %}">
+                <span class="d-block d-lg-none text-white">Quizzing Club</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'images/litsoc.jpeg' %}" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="{% url 'quiz-home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="{% url 'q_events_list' %}">Events</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="{% url 'quiz-team' %}">Team</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="text-center">
+            <div class="resume-section-content text-white">
+              <h1 class="mb-0 text-white">
+                  TEAM,
+                  <span class="text-primary">QUIZZING CLUB</span>
+              </h1>
+              <!-- <div class="subheading mb-5">
+                  On the banks of Uhl!
+                  <a href="mailto:quizzing_club@students.iitmandi.ac.in">quizzing_club@students.iitmandi.ac.in</a>
+              </div> -->
+          </div>
+          </section>
+          <br><br>
+          
+          
+          <div class="container contentContainer text-center" id="team">
+              <h2 class="contentHeader text-white">Running Coordinators - 2020-2021</h2>
+                <!-- <h4 class="contentHeader designation">Running Coordinators - 2020-2021</h4> -->
+                <div class="row team-box">
+                  <div class="col-lg-3 col-sm-4 text-center member">
+                    <!-- new -->
+                    <div class="text-center">
+                    <img class="img-circle img-responsive img-center team-img rounded-circle" src="{% static 'images/raman.png' %}" alt="Coordi1" width="260">
+                    <h3 class="text-white">Raman Soni</h3>
+                    <div>
+                      <a target="_blank" href="#"><i class="fab fa-facebook-f social-button"></i></a>
+                      <a target="_blank" href="#"><i class="fas fa-mail-bulk social-button"></i></a>
+                    </div>
+                  </div>
+                  <!-- end new -->
+                  </div>
+                  <div class="col-lg-3 col-sm-4 text-center member">
+                    <!-- new -->
+                    <div class="text-center">
+                    <img class="img-circle img-responsive img-center team-img rounded-circle" src="{% static 'images/anwesh.jpg' %}" alt="Coordi2" width="250">
+                    <h3 class="text-white">Anwesh Das</h3>
+                    <div>
+                      <a target="_blank" href="#"><i class="fab fa-facebook-f social-button"></i></a>
+                      <a target="_blank" href="#"><i class="fas fa-mail-bulk social-button"></i></a>
+                    </div>
+                  </div>
+                  <!-- end new -->
+                  </div>
+                </div>
+                <hr />
+                <h2 class="contentHeader text-white">Past Coordinators</h2>
+                <h4 class="contentHeader designation text-white">2019-2020</h4>
+                <div class="row team-box">
+                  <div class="col-lg-3 col-sm-4 text-center member">
+                    <img class="img-circle img-responsive img-center team-img rounded-circle" src="{% static 'images/param.jpg' %}" alt="past coordi 1" width="250">
+                    <h3 class="text-white">Param Kashyap</h3>
+                    <div>
+                      <a target="_blank" href="#"><i class="fab fa-facebook-f social-button"></i></a>
+                      <a target="_blank" href="#"><i class="fas fa-mail-bulk social-button"></i></a>
+                    </div>
+                  </div>
+                </div>

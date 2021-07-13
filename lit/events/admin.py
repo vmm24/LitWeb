@@ -4,7 +4,8 @@ from django.contrib import admin
 from .models import Events
 
 class EventsAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'date')
+    list_display = ('title', 'content', 'date','status')
+    list_filter = ("status",)
     search_fields = ['title', 'content']
     prepopulated_fields = {'content': ('title',)}
   

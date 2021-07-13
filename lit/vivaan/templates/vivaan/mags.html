@@ -1,7 +1,60 @@
-
-{%extends "blog/base.html" %}
-{% block content %}
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>LitSoc</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+</head>
 <style>
+  body {
+    background-image: url('/static/images/bg.jpg');
+    background-repeat: repeat;
+  }
+</style>
+
+<body id="page-top">
+  <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="sideNav" style="background-image: url('/static/images/bkm3.png'); background-repeat: no-repeat; background-size: 100% 100%;">
+            <a class="navbar-brand js-scroll-trigger" href="{% url 'litsoc-home' %}">
+                <span class="d-block d-lg-none">Vivaan</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'images/litsoc.jpeg' %}" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    
+                </ul>
+            </div>
+        </nav>
+      <div>
+
+<br><br>
+<section class="text-center">
+  <div class="resume-section-content">
+    <h1 class="mb-0 text-primary">
+        VIVAAN
+    </h1>
+</div>
+</section>
+<br><br>
+
+<style>
+  body {
+    background-image: url('/static/images/bg.jpg');
+    background-repeat: repeat;
+  }
+
   .container {
       font-family: "Roboto", sans-serif;
       font-size: 18px;
@@ -17,10 +70,9 @@
       <!-- Blog Entries Column -->
           {% for mag in mags_list %}
           <div class="col-md-6 mt-3 mx-auto">
-                <a href = "{{ mag.pdf.url }}"> <img src = {{ mag.image.url }} width="70%" height="auto" class="mx-auto d-block"> </a>
+                <a href = "{{ mag.pdf.url }}"> <img src = {{ mag.image.url }} width="70%" height="70%" class="mx-auto d-block"> </a>
                 <h4 class="card-title text-center">{{ mag.title }}</h4>
           </div>
           {% endfor %}
   </div>
 </div>
-{% endblock content %}

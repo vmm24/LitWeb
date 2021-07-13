@@ -1,0 +1,24 @@
+{%extends "quizzing/base.html" %}
+{% block content %}
+<style>
+  #post_full {
+      box-shadow: 0 16px 48px #E3E7EB;
+      background-color: #11111110;
+      border: none;
+      color: #fff;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 card mb-5  mt-5 left  top" id="post_full">
+      <div class="card-body">
+            <h3 class="mb-0 text-center text-info">{{object.title}}</h3>
+            <h4 class="flex-shrink-0 text-center"><span class="text-white">{{object.date|date:"F d, Y"}}</span><span class="text-white">{{ model.datetime|time }}</span></h4>
+            <a href = "{{ object.image.url }}"> <img src = {{object.image.url}} width="70%" height="auto" class="mx-auto d-block"> </a>
+            <br>
+            <p>{{object.content | linebreaks}}</p>
+          </div>
+          </div>
+        </div>
+
+{% endblock content %}

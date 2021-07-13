@@ -1,5 +1,5 @@
 
-{%extends "blog/base.html" %}
+{%extends "debating/base.html" %}
 {% block content %}
 <style>
   .container {
@@ -22,14 +22,13 @@
 <div class="container">
   <div class="row">
       <!-- Blog Entries Column -->
-      
-          {% for event in events_list %}
+          {% for event in d_events_list %}
           <div class="col-md-6 mt-3 mx-auto">
           <div class="card mb-4">
               <div class="card-body">
-                <a href="{% url 'event_detail' event.id %}"><h3 class="card-title text-primary text-center">{{ event.title }}</h3></a>
-                <h4 class="flex-shrink-0 text-center"><span>{{event.date}}</span></h4>
-                <img src = {{ event.image.url }} width="70%" height="auto" class="mx-auto d-block">
+                <a href="{% url 'd_event_detail' event.id %}"><h3 class="card-title text-primary text-center">{{ event.title }}</h3></a>
+                <h4 class="flex-shrink-0 text-center text-light"><span>{{event.date}}</span></h4>
+                <img src = {{ event.image.url }} width="50%" height="50%" class="mx-auto d-block">
               </div>
           </div>
           </div>

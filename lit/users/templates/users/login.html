@@ -1,6 +1,17 @@
 {%extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+<style>
+.card {
+  box-shadow: 0 16px 48px #E3E7EB;
+  flex-wrap: wrap;
+  box-shadow: 0 16px 48px #E3E7EB;
+  background-color: #11111110;
+  border: none;
+  margin-top: 25%;
+}
+</style>
+  <div class="card mb-8">
   <div class="content-section">
     <form method="POST">
       {% csrf_token %}
@@ -15,4 +26,5 @@
     <div class="border-top pt-3">
       <small class="text-muted"><a class="ml-2" href="{%url 'register' %}">Need an account?</a></small>
     </div>
+  </div>
 {% endblock content %}

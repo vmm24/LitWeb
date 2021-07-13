@@ -3,6 +3,17 @@
 {%extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+<style>
+  .card {
+    box-shadow: 0 16px 48px #E3E7EB;
+    flex-wrap: wrap;
+    box-shadow: 0 16px 48px #E3E7EB;
+    background-color: #11111110;
+    border: none;
+    margin-top: 15%;
+  }
+  </style>
+  <div class="card mb-10">
   <div class="content-section">
     <form method="POST">
       {% csrf_token %}
@@ -14,5 +25,6 @@
         <button class="btn btn-outline-info" type="submit">Submit</button>
       </div>
     </form>
+  </div>
   </div>
 {% endblock content %}

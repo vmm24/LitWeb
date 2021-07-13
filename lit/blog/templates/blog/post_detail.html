@@ -13,7 +13,7 @@
       <div class="card-body">
         <h2 class="text-primary">{% block title %} {{ object.title }} {% endblock title %}</h2>
         <p class=" text-muted">{{ post.author }} | {{ post.date }}</p>
-        <p class="card-text ">{{ object.content | linebreaks }}</p>
+        <p class="card-text">{{ object.content | linebreaks }}</p>
       </div>
       {% if post.author == user %}
             <div>
