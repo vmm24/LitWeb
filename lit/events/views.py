@@ -9,10 +9,10 @@ def w_events(request):
     return render(request,'events/w_events.html',context0)
 
 def d_events(request):
-    
-    d_events: Events.objects.filter(status=1).order_by('-date')
-    
-    return render(request,'events/d_events.html', {'d_events': d_events})
+    context1 = {
+    'd_events': Events.objects.filter(status=1).order_by('-date')
+    }
+    return render(request,'events/d_events.html', context1)
 
 def q_events(request):
     context2 = {
