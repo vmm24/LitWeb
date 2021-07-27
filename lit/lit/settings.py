@@ -25,7 +25,7 @@ SECRET_KEY = '+2w_dvbk)!w4q5ts3h12!(7y8e^5fs4%6$rnl$sp52!1nsdfwd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['litsoc.iitmandi.co.in',]
+ALLOWED_HOSTS = ['litsoc.iitmandi.co.in','127.0.0.1']
 
 # Application definition
 
