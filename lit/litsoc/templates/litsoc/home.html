@@ -2,10 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>LitSoc</title>
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}"> {% endcomment %}
+    {% comment %} <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LitSoc</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}"> {% endcomment %}
 </head>
 <style>
     * {
@@ -116,11 +129,11 @@
             </div>
             
             <div class="column" style="background-color:rgb(202, 53, 53);">
-                <a href="{% url 'blog-home' %}"><img src="{% static 'images/11.png' %}" alt="image nhi aaya" style="width:100%;height:100%;" ></a>
+                <a href="{% url 'blog-home' %}"><img src="{% static 'images/11.png' %}" alt="An image" style="width:100%;height:100%;" ></a>
             </div>
             
             <div class="column" style="background-color:rgb(103, 255, 89);">
-                <a href="{% url 'debating-home' %}"><img src="{% static 'images/31.png' %}" alt="image nhi aaya" style="width:100%;height:100%;" ></a>
+                <a href="{% url 'debating-home' %}"><img src="{% static 'images/31.png' %}" alt="An image" style="width:100%;height:100%;" ></a>
             </div>
           </div>
     </div>
