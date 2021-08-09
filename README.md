@@ -1,3 +1,2 @@
 # LitWeb
-A website for LitSoc
-(work in progress!)
+A website for LitSoc!
